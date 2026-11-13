@@ -5,9 +5,11 @@
         <!-- Logo -->
         <div class="flex-shrink-0">
           <router-link to="/" class="flex items-center space-x-3">
-            <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span class="text-white font-bold text-xl">GS</span>
-            </div>
+            <img
+              src="/Logo.jpg"
+              alt="Global Shapers Hub Oruro"
+              class="w-10 h-10 rounded-lg object-cover"
+            />
             <div class="hidden sm:block">
               <span class="text-xl font-bold text-gray-900">Global Shapers</span>
               <span class="block text-xs text-gray-600">Hub Oruro</span>

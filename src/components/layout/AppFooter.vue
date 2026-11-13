@@ -5,9 +5,11 @@
         <!-- About Section -->
         <div class="col-span-1 md:col-span-2">
           <div class="flex items-center space-x-3 mb-4">
-            <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span class="text-white font-bold text-xl">GS</span>
-            </div>
+            <img
+              src="/Logo.jpg"
+              alt="Global Shapers Hub Oruro"
+              class="w-10 h-10 rounded-lg object-cover"
+            />
             <div>
               <span class="text-xl font-bold text-white">Global Shapers</span>
               <span class="block text-sm text-gray-400">Hub Oruro</span>

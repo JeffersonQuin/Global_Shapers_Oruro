@@ -53,7 +53,15 @@ export function useForms() {
         .from('community_proposals')
         .insert([
           {
-            ...data,
+            submitter_name: data.submitter_name,
+            submitter_email: data.submitter_email,
+            submitter_phone: data.submitter_phone ?? null,
+            problem_title: data.problem_title,
+            problem_description: data.problem_description,
+            proposed_solution: data.proposed_solution ?? null,
+            category_id: data.category_id ?? null,
+            geographic_area: data.geographic_area ?? null,
+            priority_level: data.priority_level ?? null,
             ip_address: null,
             user_agent: navigator.userAgent,
           },
@@ -83,7 +91,10 @@ export function useForms() {
         .from('contact_messages')
         .insert([
           {
-            ...data,
+            sender_name: data.sender_name,
+            sender_email: data.sender_email,
+            subject: data.subject,
+            message: data.message,
             ip_address: null,
             user_agent: navigator.userAgent,
           },

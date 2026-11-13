@@ -114,7 +114,7 @@ const selectedCategory = ref('')
 const selectedType = ref('')
 const showOpenOnly = ref(true)
 
-let searchTimeout: NodeJS.Timeout
+let searchTimeout: ReturnType<typeof setTimeout>
 
 function handleSearch() {
   clearTimeout(searchTimeout)

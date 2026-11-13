@@ -76,8 +76,8 @@ export function useInitiatives() {
       if (data?.id) {
         await supabase
           .from('initiatives')
-          .update({ view_count: (data.view_count || 0) + 1 })
-          .eq('id', data.id)
+          .update({ view_count: ((data.view_count as number) || 0) + 1 })
+          .eq('id', data.id as string)
       }
     } catch (e: any) {
       error.value = e.message || 'Error al cargar la iniciativa'

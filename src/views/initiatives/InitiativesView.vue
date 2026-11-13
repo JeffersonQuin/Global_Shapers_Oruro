@@ -122,7 +122,7 @@ const searchQuery = ref('')
 const selectedCategory = ref('')
 const selectedStatus = ref('')
 
-let searchTimeout: NodeJS.Timeout
+let searchTimeout: ReturnType<typeof setTimeout>
 
 function handleSearch() {
   clearTimeout(searchTimeout)

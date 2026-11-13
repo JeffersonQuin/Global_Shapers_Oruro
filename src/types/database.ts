@@ -575,6 +575,29 @@ export interface Database {
           replied_at?: string | null
         }
       }
+      chatbot_conversations: {
+        Row: {
+          id: string
+          session_id: string
+          user_message: string
+          bot_response: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          session_id: string
+          user_message: string
+          bot_response: string
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          session_id?: string
+          user_message?: string
+          bot_response?: string
+          created_at?: string
+        }
+      }
     }
     Views: {
       v_active_initiatives: {
@@ -657,7 +680,18 @@ export interface Database {
       }
     }
     Functions: {
-      [_ in never]: never
+      search_chatbot_knowledge: {
+        Args: {
+          search_query: string
+          result_limit: number
+        }
+        Returns: {
+          id: string
+          title: string
+          content: string
+          content_type: string | null
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never

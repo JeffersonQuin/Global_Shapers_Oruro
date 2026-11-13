@@ -15,14 +15,14 @@ export function useSiteSettings() {
     try {
       const { data, error: fetchError } = await supabase
         .from('site_settings')
-        .select('*')
+        .select('key, value')
         .eq('is_public', true)
 
       if (fetchError) throw fetchError
 
       // Transform array into key-value object
       const settingsObj: SiteSettings = {}
-      data?.forEach((setting) => {
+      ;(data as Array<{ key: string; value: any }> | null)?.forEach((setting) => {
         settingsObj[setting.key] = setting.value
       })
 

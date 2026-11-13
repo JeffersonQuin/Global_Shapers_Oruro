@@ -161,7 +161,7 @@ watch(() => messages.value.length, () => {
     scrollToBottom()
   } else {
     // Incrementar contador de mensajes no leídos si el chat está cerrado
-    if (messages.value.length > 0 && messages.value[messages.value.length - 1].role === 'assistant') {
+    if (messages.value.length > 0 && messages.value.at(-1)?.role === 'assistant') {
       unreadCount.value++
     }
   }
